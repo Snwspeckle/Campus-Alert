@@ -1,13 +1,13 @@
 //
 //  NetworkingManager.m
-//  NightRide
+//  Campus Alert System
 //
 //  Created by Anthony on 1/27/14.
-//  Copyright (c) 2014 NightRide. All rights reserved.
+//  Copyright (c) 2014 Campus Alert System. All rights reserved.
 //
 
 #import "NetworkingManager.h"
-#import <AFNetworking.h>
+#import "AFNetworking.h"
 
 @implementation NetworkingManager
 
@@ -16,9 +16,10 @@
 	NSDictionary *message = [dictionary copy];
 		
 	// Sends request to server to login, server sends response via JSON
-    NSURL *URL = [NSURL URLWithString:@"http://nightride.edu.arvixe.com/NightRide/"];
+    NSURL *URL = [NSURL URLWithString:@"http://10.90.2.49/MapServer/"];
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:URL];
-    [manager POST:@"login" parameters:message success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager POST:@"sendLocation" parameters:message success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [responseHandler networkingResponseReceived:responseObject ForMessage:message];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

@@ -1,9 +1,9 @@
 //
 //  NetworkingManager.h
-//  NightRide
+//  Campus Alert System
 //
 //  Created by Anthony on 1/27/14.
-//  Copyright (c) 2014 NightRide. All rights reserved.
+//  Copyright (c) 2014 Campus Alert System. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

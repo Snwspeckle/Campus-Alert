@@ -12,7 +12,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    // Checks if the app has been launched before, if not, sets default values
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"hasBeenLaunched"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hasBeenLaunched"];
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isLoggedIn"];
+    }
+    
     // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:19.0/255.0 green:122.0/255.0 blue:203.0/255.0 alpha:1]];
+    NSDictionary *navTitle = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil, nil, nil, nil, nil];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setTitleTextAttributes:navTitle];
+    
     return YES;
 }
 							

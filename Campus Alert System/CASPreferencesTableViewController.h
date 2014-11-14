@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CASPreferencesTableViewController : UITableViewController
+@property (strong, nonatomic) IBOutlet UITableViewCell *cellCallUCPD;
 
 @end

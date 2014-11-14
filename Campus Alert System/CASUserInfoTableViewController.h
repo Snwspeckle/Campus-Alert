@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface CASUserInfoTableViewController : UITableViewController
+- (IBAction)btnSave:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextField *txtCLS;
+@property (strong, nonatomic) IBOutlet UITextField *txtFirstName;
+@property (strong, nonatomic) IBOutlet UITextField *txtLastName;
+@property (strong, nonatomic) IBOutlet UITextField *txtPhone;
+@property (strong, nonatomic) IBOutlet UITextField *txtEmail;
 
 @end

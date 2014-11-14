@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "CASRequestProgressViewController.h"
 
-@interface CASRequestHelpViewController : UIViewController
+@interface CASRequestHelpViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+
+- (IBAction)btnRequestHelp:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *btnRequestHelp;
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
