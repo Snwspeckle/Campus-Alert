@@ -1,5 +1,5 @@
 //
-//  CASViewController.h
+//  CASRequestProgressViewController.h
 //  Campus Alert System
 //
 //  Created by Anthony on 4/5/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CASViewController : UIViewController
+@interface CASRequestProgressViewController : UIViewController
 
 @end
